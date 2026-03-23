@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArachnoBeat - Premium Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script></head>
+<body>
+    <div id="canvas-container"></div>
+
+    <div class="ui-overlay">
+        <div class="player-card">
+            <div class="track-info">
+                <h1 id="song-title">Select a Track</h1>
+                <p id="artist-name">Upload music from your phone</p>
+            </div>
+
+            <div class="visualizer-container">
+                <canvas id="audio-visualizer"></canvas>
+            </div>
+
+            <div class="controls">
+                <input type="file" id="audio-upload" accept="audio/*" hidden>
+                <button class="btn-secondary" onclick="document.getElementById('audio-upload').click()">
+                    <span>Upload</span>
+                </button>
+                
+                <div class="main-controls">
+                    <button id="prev-btn" class="ctrl-btn">⏮</button>
+                    <button id="play-pause-btn" class="ctrl-btn play-btn">▶</button>
+                    <button id="next-btn" class="ctrl-btn">⏭</button>
+                </div>
+
+                <div class="progress-area">
+                    <div class="progress-bar">
+                        <div id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
